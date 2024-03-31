@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/logo2.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Notizblock</title>
+</head>
+
+
+<body onload="render()">
+    <header class="max-width">
+        <div class="logo">
+            <img src="./img/logo2.png" alt="Logo">
+            <h1>Notepad</h1>
+        </div>
+        <img onclick="openTrashbin()" class="trashbin-img" src="./img/trashbin1.png" alt="Trashbin">
+    </header>
+
+    <div id="trashbin" class="trashbin-bg d-none">
+        <div class="trashbinContainer">
+            <button onclick="closeTrashbin()" class="x-button">X</button>
+            <h4>Recycle Bin</h4>
+            <div id="myDeletedNotes"></div>
+        </div>
+    </div>
+
+    <div class="aot max-width">
+        <div class="inputs">
+            <input id="title" placeholder="Title" type="text">
+            <textarea name="Notizen" id="note" cols="10" rows="10" placeholder="Note"></textarea>
+        </div>
+        <button class="first-button" onclick="addNote()">Add Note</button>
+    </div>
+    <h3 class="max-width">My Notes</h3>
+    <div class="max-width" id="myNotes"></div>
+    </div>
+
+
+</body>
+
+</html>
